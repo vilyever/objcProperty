@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char objcPropertyVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <objcProperty/PublicHeader.h>
 
-
+#import <objcProperty/VDProperty.h>
+#import <objcProperty/NSObject+VDProperty.h>

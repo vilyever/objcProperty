@@ -123,8 +123,22 @@ NSString * const PropertyUnionSuffix = @")";
 
 - (void)__i__initVDProperty;
 
+@property (nonatomic, copy, readwrite) NSString *name;
+
+@property (nonatomic, strong, readwrite) Class type;
+@property (nonatomic, copy, readwrite) NSString *typeName;
 @property (nonatomic, assign, readwrite) VDPropertyPrimitiveType primitiveType;
 
+/** 所属类,声明此property的类 */
+@property (nonatomic, strong, readwrite) Class ownerClass;
+
+/** 若为Struct */
+@property (nonatomic, copy, readwrite) NSString *structName;
+
+/** 若为Union */
+@property (nonatomic, copy, readwrite) NSString *unionName;
+
+/** 所有的protocol Name */
 @property (nonatomic, strong, readwrite) NSArray *protocols;
 
 @property (nonatomic, assign, readwrite) BOOL isIgnore;
@@ -144,7 +158,10 @@ NSString * const PropertyUnionSuffix = @")";
 @property (nonatomic, assign, readwrite) BOOL isPointer;
 
 @property (nonatomic, assign, readwrite) VDPropertyAccessorType getterType;
+@property (nonatomic, copy, readwrite) NSString *getterSelectorName;
+
 @property (nonatomic, assign, readwrite) VDPropertyAccessorType setterType;
+@property (nonatomic, copy, readwrite) NSString *setterSelectorName;
 
 @end
 

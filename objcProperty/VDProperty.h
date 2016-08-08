@@ -53,20 +53,20 @@ typedef NS_ENUM(NSInteger, VDPropertyPrimitiveType) {
 
 
 #pragma mark Properties
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy, readonly) NSString *name;
 
-@property (nonatomic, copy) Class type;
-@property (nonatomic, copy) NSString *typeName;
+@property (nonatomic, strong, readonly) Class type;
+@property (nonatomic, copy, readonly) NSString *typeName;
 @property (nonatomic, assign, readonly) VDPropertyPrimitiveType primitiveType;
 
 /** 所属类,声明此property的类 */
-@property (nonatomic, copy) Class ownerClass;
+@property (nonatomic, strong, readonly) Class ownerClass;
 
 /** 若为Struct */
-@property (nonatomic, copy) NSString *structName;
+@property (nonatomic, copy, readonly) NSString *structName;
 
 /** 若为Union */
-@property (nonatomic, copy) NSString *unionName;
+@property (nonatomic, copy, readonly) NSString *unionName;
 
 /** 所有的protocol Name */
 @property (nonatomic, strong, readonly) NSArray *protocols;
@@ -88,10 +88,10 @@ typedef NS_ENUM(NSInteger, VDPropertyPrimitiveType) {
 @property (nonatomic, assign, readonly) BOOL isPointer;
 
 @property (nonatomic, assign, readonly) VDPropertyAccessorType getterType;
-@property (nonatomic, copy) NSString *getterSelectorName;
+@property (nonatomic, copy, readonly) NSString *getterSelectorName;
 
 @property (nonatomic, assign, readonly) VDPropertyAccessorType setterType;
-@property (nonatomic, copy) NSString *setterSelectorName;
+@property (nonatomic, copy, readonly) NSString *setterSelectorName;
 
 #pragma mark Protected Method
 

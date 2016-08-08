@@ -46,11 +46,11 @@ typedef NS_ENUM(NSInteger, VDPropertyPrimitiveType) {
 @interface VDProperty : NSObject
 
 #pragma mark Constructor
-
-
-#pragma mark Public Method
 + (NSArray *)propertiesWithClass:(Class)objClass;
 + (NSArray *)propertiesWithClass:(Class)objClass traceToAncestorClass:(Class)ancestorClass;
+
+#pragma mark Public Method
+
 
 #pragma mark Properties
 @property (nonatomic, copy) NSString *name;

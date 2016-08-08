@@ -152,9 +152,6 @@ NSString * const PropertyUnionSuffix = @")";
 @implementation VDProperty
 
 #pragma mark Constructor
-
-
-#pragma mark Public Method
 + (NSArray *)propertiesWithClass:(Class)objClass {
     return [self propertiesWithClass:objClass traceToAncestorClass:objClass];
 }
@@ -294,6 +291,9 @@ NSString * const PropertyUnionSuffix = @")";
     
     return [NSArray arrayWithArray:propertyInstances];
 }
+
+#pragma mark Public Method
+
 
 #pragma mark Properties
 - (BOOL)isAssign {
